@@ -17,7 +17,22 @@
 			
 		},
 		onLoad() {
-
+			// 请求轮播图数据
+			uni.request({
+				url: 'https://www.imovietrailer.com/superhero/index/carousel/list', //仅为示例，并非真实接口地址。
+				data: {
+					qq: 'lee33634220'
+				},
+				header: {
+					'content-type': 'application/x-www-form-urlencoded'
+				},
+				method:"POST",
+				success: (res) => {
+					console.log(res.data);
+					res.data.data;
+					this.text = 'request success';
+				}
+			});
 		},
 		methods: {
 

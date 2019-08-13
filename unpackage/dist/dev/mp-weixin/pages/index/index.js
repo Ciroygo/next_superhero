@@ -112,7 +112,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //
 //
 //
 //
@@ -130,10 +130,26 @@ var _default =
   data: function data() {
 
   },
-  onLoad: function onLoad() {
+  onLoad: function onLoad() {var _this = this;
+    // 请求轮播图数据
+    uni.request({
+      url: 'https://www.imovietrailer.com/superhero/index/carousel/list', //仅为示例，并非真实接口地址。
+      data: {
+        qq: 'lee33634220' },
+
+      header: {
+        'content-type': 'application/x-www-form-urlencoded' },
+
+      method: "POST",
+      success: function success(res) {
+        console.log(res.data);
+        res.data.data;
+        _this.text = 'request success';
+      } });
 
   },
   methods: {} };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["default"]))
 
 /***/ }),
 /* 17 */
