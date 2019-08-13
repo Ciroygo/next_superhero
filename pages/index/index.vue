@@ -1,18 +1,20 @@
 <template>
-	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
-		</view>
+	<view class="page">
+		<swiper :indicator-dots="true" :autoplay="true" :interval="3000" :duration="1000" class="carousel">
+			<swiper-item>
+				<image src="../../static/carousel/batmanvssuperman.png" class="carousel"></image>
+			</swiper-item>
+			<swiper-item>
+				<image src="../../static/carousel/spiderman.png" class="carousel"></image>
+			</swiper-item>
+		</swiper>
 	</view>
 </template>
 
 <script>
 	export default {
 		data() {
-			return {
-				title: 'Hello'
-			}
+			
 		},
 		onLoad() {
 
@@ -24,29 +26,5 @@
 </script>
 
 <style>
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.logo {
-		height: 200upx;
-		width: 200upx;
-		margin-top: 200upx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50upx;
-	}
-
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36upx;
-		color: #8f8f94;
-	}
+	@import url("index.css");
 </style>
