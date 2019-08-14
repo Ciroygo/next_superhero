@@ -55,3 +55,72 @@
 }
 
 /* 热门超英 */
+
+/* 热门预告 */
+.hot-video {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 0 20rpx 20rpx 20rpx;
+}
+.hot-movie-single {
+	width: 350rpx;
+	height: 220rpx;
+	margin-top: 10rpx;
+}
+/* 热门预告end */
+
+/* 猜你喜欢 */
+.guess-u-like {
+	display: flex;
+	flex-direction: column;
+}
+.single-like-movie {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 30rpx 20rpx;
+	
+}
+.like-movie {
+	width: 180rpx;
+	height: 240rpx;
+	border-radius: 3%;
+	
+}
+.movie-desc {
+	display: flex;
+	flex-direction: column;
+	width: 340rpx;
+}
+.movie-title {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.movie-info {
+	color: #999999;
+	font-size: 14px;
+}
+.movie-oper {
+	width: 140rpx;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-left: #dbdbda dashed 2px;
+}
+.praise-ico {
+	width: 40rpx;
+	height: 40rpx;
+}
+.praise-me {
+	font-size: 14px;
+	color: #feab2a;
+}
+.animation-opacity {
+	font-weight: bold;
+	opacity: 0;
+}
+/* 猜你喜欢end */
