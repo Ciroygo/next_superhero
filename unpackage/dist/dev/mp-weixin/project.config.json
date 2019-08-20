@@ -26,8 +26,15 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 0,
+			"list": [
+				{
+					"name": "开发",
+					"query": "",
+					"id": 0,
+					"pathName": "pages/search/search"
+				}
+			]
 		}
 	}
 }

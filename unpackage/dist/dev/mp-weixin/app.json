@@ -1,8 +1,9 @@
 {
   "pages": [
-    "pages/index/index",
     "pages/search/search",
-    "pages/me/me"
+    "pages/index/index",
+    "pages/me/me",
+    "pages/movie/movie"
   ],
   "subPackages": [],
   "window": {
@@ -38,5 +39,5 @@
     ]
   },
   "usingComponents": {},
-  "sitemapLocation": "sitemap13.json"
+  "sitemapLocation": "sitemap91.json"
 }

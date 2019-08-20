@@ -2,11 +2,7 @@
 	
 	<view class="movie-score-wapper">
 		<image v-for="n in 5" :key="n" :src="'../static/icos/star-' + (n < yellowScore ? 'yellow' : 'gray') +'.png'" class="star-ico"></image>
-	<!-- 	<image src="../static/icos/star-yellow.png" class="star-ico"></image>
-		<image src="../static/icos/star-yellow.png" class="star-ico"></image>
-		<image src="../static/icos/star-yellow.png" class="star-ico"></image>
-		<image src="../static/icos/star-yellow.png" class="star-ico"></image>
-		<image src="../static/icos/star-gray.png" class="star-ico"></image> -->
+		
 		<view class="movie-score" v-if="showNum == 1">
 			{{innerScore}}
 		</view>

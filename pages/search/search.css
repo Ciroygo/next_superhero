@@ -1,0 +1,49 @@
+/* 搜索框 */
+.search-ico-wapper {
+	background-color: #eaeaea;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 0 10rpx 0 10rpx;
+}
+.search-ico {
+	width: 40rpx;
+	height: 40rpx;
+}
+
+.search-text {
+	font-size: 14px;
+	background-color: #eaeaea;
+	height: 60rpx;
+	width: 650rpx;
+	
+}
+
+.search-block {
+	display: flex;
+	flex-direction: row;
+	padding: 0 20rpx 20rpx 20rpx;
+	background-color: #F8F8F8;
+	/* 固定搜索栏 */
+	position: fixed;
+	top: 100;
+	z-index: 2000;
+}
+/* 搜索框end */
+
+/* 列表 */
+.movie-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	padding: 100rpx 10rpx 0 10rpx;
+}
+.poster {
+	width: 200rpx;
+	height: 270rpx;
+}
+.movie-wapper {
+	padding: 10rpx 20rpx;
+}
+/* 列表end */

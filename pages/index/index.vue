@@ -96,8 +96,8 @@
 
 <script>
 	import common from "../../common/common.js";
-	import helloComp from "../../components/helloComp.vue"
-	import trailerStars from "../../components/trailerStars.vue"
+	import helloComp from "../../components/helloComp.vue";
+	import trailerStars from "../../components/trailerStars.vue";
 	
 	export default {
 		data() {
@@ -203,7 +203,6 @@
 					method:"POST",
 					success: (res) => {
 						this.guessULikeList = res.data.data;
-				
 					},
 					complete: ()=> {
 						uni.hideLoading();
