@@ -140,7 +140,7 @@
 			uni.request({
 				url: this.serverUrl + '/index/carousel/list', //仅为示例，并非真实接口地址。
 				data: {
-					qq: 'lee98086139'
+					qq: this.import_key
 				},
 				header: {
 					'content-type': 'application/x-www-form-urlencoded'
@@ -154,7 +154,7 @@
 			
 			// 查询热门超英
 			uni.request({
-				url: this.serverUrl + '/index/movie/hot?type=superhero&qq=lee98086139', //仅为示例，并非真实接口地址。
+				url: this.serverUrl + '/index/movie/hot?type=superhero&qq=' + this.import_key, //仅为示例，并非真实接口地址。
 
 
 				method:"POST",
@@ -165,7 +165,7 @@
 			
 			// 预告片
 			uni.request({
-				url: this.serverUrl + '/index/movie/hot?type=trailer&qq=lee98086139', //仅为示例，并非真实接口地址。
+				url: this.serverUrl + '/index/movie/hot?type=trailer&qq=' + this.import_key, //仅为示例，并非真实接口地址。
 		
 				method:"POST",
 				success: (res) => {
@@ -175,7 +175,7 @@
 			
 			//猜你喜欢
 			uni.request({
-				url: this.serverUrl + '/index/guessULike?qq=lee98086139', //仅为示例，并非真实接口地址。
+				url: this.serverUrl + '/index/guessULike?qq=' + this.import_key, //仅为示例，并非真实接口地址。
 					
 				method:"POST",
 				success: (res) => {
@@ -198,7 +198,7 @@
 				
 				//猜你喜欢
 				uni.request({
-					url: this.serverUrl + '/index/guessULike?qq=lee98086139', //仅为示例，并非真实接口地址。
+					url: this.serverUrl + '/index/guessULike?qq=' + this.import_key, //仅为示例，并非真实接口地址。
 						
 					method:"POST",
 					success: (res) => {
