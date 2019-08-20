@@ -1,7 +1,7 @@
 (global["webpackJsonp"] = global["webpackJsonp"] || []).push([["common/vendor"],[
 /* 0 */
 /*!***********************************************!*\
-  !*** /Users/roy/Sites/next_superhero/main.js ***!
+  !*** /Users/roy/Sites/next-superhero/main.js ***!
   \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -14,6 +14,8 @@ var _App = _interopRequireDefault(__webpack_require__(/*! ./App */ 5));function 
 _vue.default.config.productionTip = false;
 
 _vue.default.prototype.serverUrl = "https://www.imovietrailer.com/superhero"; //生产环境
+// 获取地址 http://www.imovietrailer.com/#/
+_vue.default.prototype.import_key = "lee87962777";
 
 _App.default.mpType = 'app';
 
@@ -7479,7 +7481,7 @@ module.exports = g;
 /***/ }),
 /* 4 */
 /*!**************************************************!*\
-  !*** /Users/roy/Sites/next_superhero/pages.json ***!
+  !*** /Users/roy/Sites/next-superhero/pages.json ***!
   \**************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -7601,7 +7603,7 @@ function normalizeComponent (
 /***/ }),
 /* 11 */
 /*!********************************************************************************!*\
-  !*** /Users/roy/Sites/next_superhero/main.js?{"page":"pages%2Findex%2Findex"} ***!
+  !*** /Users/roy/Sites/next-superhero/main.js?{"page":"pages%2Findex%2Findex"} ***!
   \********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -7622,7 +7624,7 @@ createPage(_index.default);
 /* 16 */,
 /* 17 */
 /*!********************************************************!*\
-  !*** /Users/roy/Sites/next_superhero/common/common.js ***!
+  !*** /Users/roy/Sites/next-superhero/common/common.js ***!
   \********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -7637,7 +7639,7 @@ var _default = {
 /* 19 */,
 /* 20 */
 /*!**********************************************************************************!*\
-  !*** /Users/roy/Sites/next_superhero/main.js?{"page":"pages%2Fsearch%2Fsearch"} ***!
+  !*** /Users/roy/Sites/next-superhero/main.js?{"page":"pages%2Fsearch%2Fsearch"} ***!
   \**********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -7658,7 +7660,7 @@ createPage(_search.default);
 /* 25 */,
 /* 26 */
 /*!**************************************************************************!*\
-  !*** /Users/roy/Sites/next_superhero/main.js?{"page":"pages%2Fme%2Fme"} ***!
+  !*** /Users/roy/Sites/next-superhero/main.js?{"page":"pages%2Fme%2Fme"} ***!
   \**************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {

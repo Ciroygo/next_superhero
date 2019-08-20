@@ -221,14 +221,14 @@
 						duration:400,
 					})
 				this.animationData = this.animation;
-				this.animationDataArr[index] = this.animationData.export();
+				this.animationDataArr[index] = this.animation.export();
 				
 				setTimeout(function() {
 					this.animation.translateY(0).opacity(0).step({
 						duration:0,
 					});
 					this.animationData = this.animation;
-					this.animationDataArr[index] = this.animationData.export();
+					this.animationDataArr[index] = this.animation.export();
 				}.bind(this), 500);
 				// #endif
 			}
