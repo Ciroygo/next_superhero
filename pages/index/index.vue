@@ -112,6 +112,7 @@
 				guessULikeList: []
 			}
 		},
+
 		onUnload() {
 			this.animation = {};
 			

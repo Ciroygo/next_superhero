@@ -12,9 +12,11 @@
 		
 		<!-- 影片基本信息 -->
 		<view class="movie-info">
-			<image 
-				:src="trailerInfo.cover" 
-				class="cover"></image>
+			<navigator :url="'../cover/cover?cover=' + trailerInfo.cover">
+				<image 
+					:src="trailerInfo.cover" 
+					class="cover"></image>
+			</navigator>
 			<view class="movie-desc">
 				<view class="title">{{trailerInfo.name}}</view>
 				<view class="basic-info">{{trailerInfo.basicInfo}}</view>
@@ -169,6 +171,13 @@
 					this.actorArray = res.data.data;
 				}
 			});
+		},
+		//此函数只支持小程序端 微信小程序或者群
+		onShareAppMessage(res) {
+			return {
+				title: this.trailerInfo.name,
+				path: "/pages/movie/movie?trailerId=" + this.trailerInfo.id
+			}
 		},
 		methods: {
 			lookMe(e) {

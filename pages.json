@@ -39,6 +39,10 @@
 				}
 			}
 		}
+        ,{
+            "path" : "pages/cover/cover",
+            "style" : {}
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

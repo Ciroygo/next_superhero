@@ -313,7 +313,8 @@ var helloComp = function helloComp() {return __webpack_require__.e(/*! import() 
     uni.request({ url: this.serverUrl + '/index/guessULike?qq=' + this.import_key, //仅为示例，并非真实接口地址。
       method: "POST", success: function success(res) {_this.guessULikeList = res.data.data;} });this.refresh();}, methods: { refresh: function refresh() {var _this2 = this;uni.showLoading({ mask: true });uni.showNavigationBarLoading({}); //猜你喜欢
       uni.request({ url: this.serverUrl + '/index/guessULike?qq=' + this.import_key, //仅为示例，并非真实接口地址。
-        method: "POST", success: function success(res) {_this2.guessULikeList = res.data.data;}, complete: function complete() {uni.hideLoading();uni.hideNavigationBarLoading();
+        method: "POST", success: function success(res) {_this2.guessULikeList = res.data.data;}, complete: function complete() {uni.hideLoading();
+          uni.hideNavigationBarLoading();
           uni.stopPullDownRefresh();
         } });
 
