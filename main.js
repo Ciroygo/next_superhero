@@ -5,7 +5,7 @@ Vue.config.productionTip = false
 
 Vue.prototype.serverUrl = "https://www.imovietrailer.com/superhero" //生产环境
 // 获取地址 http://www.imovietrailer.com/#/
-Vue.prototype.import_key = "lee87962777"
+Vue.prototype.import_key = "lee17996000"
 
 App.mpType = 'app'
 

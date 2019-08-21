@@ -85,4 +85,54 @@
 .plots-desc {
 	margin-top: 10rpx;
 	font-size: 16px;
+	display: flex;
+	flex-direction: column;
 }
+
+/* 剧照 */
+.scroll-block {
+	background-color: #f7f4f9;
+	padding: 20rpx 40rpx;
+}
+.scroll-list {
+	width: 100%;
+	white-space: nowrap;
+	margin-top: 20rpx;
+}
+.scroll-image {
+	width: 220rpx;
+	height: 320rpx;
+	margin-right: 10rpx;
+}
+/* 剧照 end */
+
+/* 演职人员 */
+.single-actor {
+	width: 170rpx;
+	height: 240rpx;
+	margin-right: 10rpx;
+}
+.actor-wapper {
+	display: inline-block;
+}
+.actor-name {
+	width: 170rpx;
+	text-align: center;
+	font-size: 15px;
+	/* color: #A9A9A9; */
+	
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.actor-role {
+	width: 170rpx;
+	text-align: center;
+	font-size: 14px;
+	color: #A9A9A9;
+	
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+/* 演职人员end */

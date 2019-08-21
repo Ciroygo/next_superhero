@@ -1,12 +1,12 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
-		{
-		    "path" : "pages/search/search",
-		    "style" : {
-				"navigationBarTitleText": "搜索页面"
-			}
-		}
-		,
+		// {
+		//     "path" : "pages/search/search",
+		//     "style" : {
+		// 		"navigationBarTitleText": "搜索页面"
+		// 		
+		// 	}
+		// },
 		
 		{
 			"path": "pages/index/index",
@@ -17,22 +17,28 @@
 				"enablePullDownRefresh": true
 			}
 		}
-	  //   ,{
-   //          "path" : "pages/search/search",
-   //          "style" : {
-			// 	"navigationBarTitleText": "搜索页面"
-			// }
-   //      }
+	    ,{
+            "path" : "pages/search/search",
+            "style" : {
+				"navigationBarTitleText": "搜索页面"
+			}
+        }
         ,{
             "path" : "pages/me/me",
             "style" : {
 				
 			}
-        }
-        ,{
-            "path" : "pages/movie/movie",
-            "style" : {}
-        }
+        },
+		{
+		    "path" : "pages/movie/movie",
+		    "style" : {
+				"app-plus": {
+				    "titleNView": {
+						"type": "transparent"
+					}
+				}
+			}
+		}
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",

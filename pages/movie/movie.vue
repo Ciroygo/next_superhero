@@ -50,6 +50,70 @@
 			<view class="plots-desc">{{trailerInfo.plotDesc}}</view>
 		</view>
 		<!-- 剧情介绍 end -->
+		<!-- 演职人员 -->
+		<view class="scroll-block">
+			<view class="plots-title">
+				演职人员
+			</view>
+			<scroll-view scroll-x="true" class="scroll-list">
+				
+				<view
+					class="actor-wapper"
+					v-for="(director, index) in directorArray"
+					:key="index">
+					<image
+						:src="director.photo" 
+						class="single-actor"
+						mode="aspectFill"
+						@click="lookStaffs"
+						:data-staffIndex="index"></image>
+					<view class="actor-name">
+						{{director.name}}
+					</view>
+					<view class="actor-role">
+						{{director.actName}}
+					</view>
+				</view>
+				
+				<view
+					class="actor-wapper"
+					v-for="(actor, index) in actorArray"
+					:key="index">
+					<image
+						:src="actor.photo" 
+						class="single-actor"
+						mode="aspectFill"
+						@click="lookStaffs"
+						:data-staffIndex="directorArray.length + index"></image>
+					<view class="actor-name">
+						{{actor.name}}
+					</view>
+					<view class="actor-role">
+						{{actor.actName}}
+					</view>
+				</view>
+			</scroll-view>
+		</view>
+		<!-- 演职人员end -->
+		
+		<!-- 剧照 -->
+		<view class="scroll-block">
+			<view class="plots-title">
+				剧照
+			</view>
+			<scroll-view scroll-x="true" class="scroll-list">
+				<image 
+					v-for="(img, index) in plotPicsArray"
+					:key="index"
+					:src="img" 
+					class="scroll-image"
+					mode="aspectFill" 
+					@click="lookMe"
+					:data-imgIndex="index"
+					></image>
+			</scroll-view>
+		</view>
+		<!-- 剧照 end -->
 	</view>
 </template>
 
@@ -60,11 +124,20 @@
 		
 		data() {
 			return {
-				trailerInfo: {}
+				trailerInfo: {},
+				plotPicsArray: [],
+				directorArray: [],
+				actorArray: []
 			}
 		},
 		onLoad(params) {
 			var trailerId = params.trailerId;
+			
+			// 通过api修改导航栏属性
+			uni.setNavigationBarColor({
+				frontColor: "#ffffff",
+				backgroundColor:"#000000"
+			})
 		
 			// 预告片详情信息
 			uni.request({
@@ -73,11 +146,56 @@
 				method:"POST",
 				success: (res) => {
 					this.trailerInfo = res.data.data;
+					this.plotPicsArray = JSON.parse(this.trailerInfo.plotPics);
+				}
+			});
+			
+			// 获取导演
+			uni.request({
+				url: this.serverUrl + '/search/staff/' + trailerId + '/1' + '?qq=' + this.import_key, 
+				//仅为示例，并非真实接口地址。
+				method:"POST",
+				success: (res) => {
+					this.directorArray = res.data.data;
+				}
+			});
+			
+			// 获取演员
+			uni.request({
+				url: this.serverUrl + '/search/staff/' + trailerId + '/2' + '?qq=' + this.import_key, 
+				//仅为示例，并非真实接口地址。
+				method:"POST",
+				success: (res) => {
+					this.actorArray = res.data.data;
 				}
 			});
 		},
 		methods: {
-			
+			lookMe(e) {
+				var imgIndex = e.currentTarget.dataset.imgindex;
+				uni.previewImage({
+					urls: this.plotPicsArray,
+					current: this.plotPicsArray[imgIndex]
+				})
+			},
+			lookStaffs(e) {
+				var staffIndex = e.currentTarget.dataset.staffindex;
+				
+				var array = this.directorArray;
+				array = array.concat(this.actorArray);
+				
+				var urls = [];
+				for (var i = 0; i < array.length; i++) {
+					var tempPhoto = array[i].photo;
+					urls.push(tempPhoto);
+				}
+				
+				
+				uni.previewImage({
+					urls: urls,
+					current: urls[staffIndex]
+				})
+			}
 		},
 		components:{
 			trailerStars
