@@ -337,6 +337,13 @@ var helloComp = function helloComp() {return __webpack_require__.e(/*! import() 
         this.animationDataArr[index] = this.animation.export();
       }.bind(this), 500);
 
+    },
+
+    showTrailer: function showTrailer(e) {
+      var trailerId = e.currentTarget.dataset.trailerid;
+      uni.navigateTo({
+        url: "../movie/movie?trailerId=" + trailerId });
+
     } },
 
 

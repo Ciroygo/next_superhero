@@ -20,7 +20,7 @@
 		
 		<scroll-view scroll-x="true" class="page-block hot">
 			<view class="single-poster" v-for="(poster, index) in hotList" :key="index">
-				<view class="poster-wrapper">
+				<view class="poster-wrapper" :data-trailerId="poster.id" @click="showTrailer">
 					<image :src="poster.cover" class="poster"></image>
 					<view class="movie-name">
 						{{poster.name}}
@@ -64,9 +64,9 @@
 			</view>
 		</view>
 		<view class="page-block guess-u-like">
-			<view class="single-like-movie" v-for="(guess, index) in guessULikeList" :key="index">
-				<image :src="guess.cover" class="like-movie"></image>
-				<view class="movie-desc">
+			<view class="single-like-movie" v-for="(guess, index) in guessULikeList" :key="index" >
+				<image :src="guess.cover" class="like-movie" :data-trailerId="guess.id" @click="showTrailer"></image>
+				<view class="movie-desc" :data-trailerId="guess.id" @click="showTrailer">
 					<view class="movie-title">
 						{{guess.name}}
 					</view>
@@ -230,6 +230,13 @@
 					this.animationDataArr[index] = this.animation.export();
 				}.bind(this), 500);
 				// #endif
+			},
+			
+			showTrailer(e) {
+				var trailerId = e.currentTarget.dataset.trailerid;
+				uni.navigateTo({
+					url: "../movie/movie?trailerId=" + trailerId
+				})
 			}
 		},
 		
