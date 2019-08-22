@@ -16,7 +16,7 @@ _vue.default.config.productionTip = false;
 
 _vue.default.prototype.serverUrl = "https://www.imovietrailer.com/superhero"; //生产环境
 // 获取地址 http://www.imovietrailer.com/#/
-_vue.default.prototype.import_key = "lee17996000";
+_vue.default.prototype.import_key = "lee87727257";
 
 _App.default.mpType = 'app';
 
@@ -1611,7 +1611,7 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ 19:
+/***/ 11:
 /*!********************************************************************************!*\
   !*** /Users/roy/Sites/next-superhero/main.js?{"page":"pages%2Findex%2Findex"} ***!
   \********************************************************************************/
@@ -1622,9 +1622,23 @@ function normalizeComponent (
 /* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ 4);
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));
-var _index = _interopRequireDefault(__webpack_require__(/*! ./pages/index/index.vue */ 20));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _index = _interopRequireDefault(__webpack_require__(/*! ./pages/index/index.vue */ 12));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_index.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["createPage"]))
+
+/***/ }),
+
+/***/ 17:
+/*!********************************************************!*\
+  !*** /Users/roy/Sites/next-superhero/common/common.js ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var serverUrl = "https://www.imovietrailer.com/superhero"; //生产环境
+var _default = {
+  serverUrl: serverUrl };exports.default = _default;
 
 /***/ }),
 
@@ -7577,17 +7591,20 @@ internalMixin(Vue);
 
 /***/ }),
 
-/***/ 25:
-/*!********************************************************!*\
-  !*** /Users/roy/Sites/next-superhero/common/common.js ***!
-  \********************************************************/
+/***/ 20:
+/*!**********************************************************************************!*\
+  !*** /Users/roy/Sites/next-superhero/main.js?{"page":"pages%2Fsearch%2Fsearch"} ***!
+  \**********************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var serverUrl = "https://www.imovietrailer.com/superhero"; //生产环境
-var _default = {
-  serverUrl: serverUrl };exports.default = _default;
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ 4);
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));
+var _search = _interopRequireDefault(__webpack_require__(/*! ./pages/search/search.vue */ 21));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_search.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["createPage"]))
 
 /***/ }),
 
@@ -7639,6 +7656,23 @@ module.exports = g;
 
 /***/ }),
 
+/***/ 34:
+/*!********************************************************************************!*\
+  !*** /Users/roy/Sites/next-superhero/main.js?{"page":"pages%2Fmovie%2Fmovie"} ***!
+  \********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ 4);
+
+var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));
+var _movie = _interopRequireDefault(__webpack_require__(/*! ./pages/movie/movie.vue */ 35));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+createPage(_movie.default);
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["createPage"]))
+
+/***/ }),
+
 /***/ 4:
 /*!**************************************************!*\
   !*** /Users/roy/Sites/next-superhero/pages.json ***!
@@ -7651,41 +7685,7 @@ module.exports = g;
 
 /***/ }),
 
-/***/ 48:
-/*!**********************************************************************************!*\
-  !*** /Users/roy/Sites/next-superhero/main.js?{"page":"pages%2Fsearch%2Fsearch"} ***!
-  \**********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ 4);
-
-var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));
-var _search = _interopRequireDefault(__webpack_require__(/*! ./pages/search/search.vue */ 49));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
-createPage(_search.default);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["createPage"]))
-
-/***/ }),
-
-/***/ 53:
-/*!********************************************************************************!*\
-  !*** /Users/roy/Sites/next-superhero/main.js?{"page":"pages%2Fmovie%2Fmovie"} ***!
-  \********************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-/* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ 4);
-
-var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));
-var _movie = _interopRequireDefault(__webpack_require__(/*! ./pages/movie/movie.vue */ 54));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
-createPage(_movie.default);
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["createPage"]))
-
-/***/ }),
-
-/***/ 62:
+/***/ 42:
 /*!********************************************************************************!*\
   !*** /Users/roy/Sites/next-superhero/main.js?{"page":"pages%2Fcover%2Fcover"} ***!
   \********************************************************************************/
@@ -7696,7 +7696,7 @@ createPage(_movie.default);
 /* WEBPACK VAR INJECTION */(function(createPage) {__webpack_require__(/*! uni-pages */ 4);
 
 var _vue = _interopRequireDefault(__webpack_require__(/*! vue */ 2));
-var _cover = _interopRequireDefault(__webpack_require__(/*! ./pages/cover/cover.vue */ 63));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+var _cover = _interopRequireDefault(__webpack_require__(/*! ./pages/cover/cover.vue */ 43));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 createPage(_cover.default);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ 1)["createPage"]))
 

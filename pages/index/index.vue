@@ -45,6 +45,9 @@
 		<view class="page-block hot-video">
 			<video 
 			v-for="(trailer, index) in trailerList"
+			:id="trailer.id"
+			:data-playintIndex="trailer.id"
+			@play="meIsPlaying"
 			:key="index"
 			:src="trailer.trailer" 
 			:poster="trailer.poster"
@@ -112,7 +115,11 @@
 				guessULikeList: []
 			}
 		},
-
+		onHide() {
+			if (this.videoContext) {
+				this.videoContext.pause();
+			}
+		},
 		onUnload() {
 			this.animation = {};
 			
@@ -238,9 +245,24 @@
 				uni.navigateTo({
 					url: "../movie/movie?trailerId=" + trailerId
 				})
+			},
+			meIsPlaying(e) {
+				
+				if(e) {
+					var trailerId = e.currentTarget.dataset.playintindex;
+					this.videoContext = uni.createVideoContext(trailerId);
+				}
+				
+				var hotTrailerList = this.trailerList;
+				
+				for(var i = 0; i < hotTrailerList.length; i++) {
+					var tempId = hotTrailerList[i].id;
+					if(tempId != trailerId) {
+						uni.createVideoContext(tempId).pause();
+					}
+				}
 			}
 		},
-		
 		components:{
 			helloComp,
 			trailerStars

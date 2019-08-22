@@ -3,6 +3,7 @@
 		<!-- 视频播放 -->
 		<view class="player">
 			<video 
+			id="myTrailer"
 			:src="trailerInfo.trailer"
 			:poster="trailerInfo.poster"
 			class="movie"
@@ -132,6 +133,19 @@
 				actorArray: []
 			}
 		},
+		onReady() {
+			//页面初次渲染完成，获取视频对象
+			this.videoContext = uni.createVideoContext('myTrailer')
+			
+		},
+		onHide() {
+			this.videoContext.pause();
+		},
+		onShow() {
+			if(this.videoContext) {
+				this.videoContext.play();
+			}
+		},
 		onLoad(params) {
 			var trailerId = params.trailerId;
 			
@@ -178,6 +192,10 @@
 				title: this.trailerInfo.name,
 				path: "/pages/movie/movie?trailerId=" + this.trailerInfo.id
 			}
+		},
+		onNavigationBarButtonTap(e) {
+			var index = e.index;
+			console.log(index);
 		},
 		methods: {
 			lookMe(e) {
